@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jonathan Cano</a>
+      
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs.html">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="PostForm" style="display:none">
+    <form name="Post" onsubmit="return validateForm()" method="post">
+      <h2>Add Post</h2>
+      <div class="row">
+          <label>Title(required)</label>
+          <input type="text" name="title">
+          <div class="error" id="titleErr"></div>
+      </div>
+      <div class="row">
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept="image/*">
+        <div class="error" id="imageErr"></div>
+      </div>
+      <div class="row">
+          <label>Article(required)</label>
+          <textarea rows="4" cols="50" name="article"></textarea>
+          <div class="error" id="articleErr"></div>
+
+      </div>
+      <div class="row">
+          <input type="submit" value="Submit" >
+      </div>
+  </form>
+</div>
+  <div class="header float">
+    <h2>Healthing Living
+      <button type="button" onclick="display()" class="btn float-right btn-primary" >Add Post</button>
+    </h2>
+  </div>
+    <div class="container-fluid">
+        <div class="row">
+          <p id="test"></p>
+          <div class="leftcolumn" id="blogs">
+            <div class="card">
+              <h2>Eating Healthy</h2>
+              <img src="../images/image1.jpg" alt="Image" class="img" >
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+            </div>
+          <div class="card">
+            <h2>Best Exercises in quarantine</h2>
+            <img src="../images/image2.jpg" alt="Image" class="img" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+          </div>
+          <div class="card">
+            <h2>Foods to eat before bed</h2>
+            <img src="../images/image3.jpg" alt="Image" class="img" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+          </div>
+          </div>
+        </div>
+         
+    </div>
+  </body>
+  <script src="post.js" ></script>
+</html>

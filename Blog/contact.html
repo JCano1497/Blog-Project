@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="contactstyle.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jonathan Cano</a>
+      
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs.html">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <form name="contactForm" onsubmit="return validateForm()" method="post">
+        <h2>Contact Me</h2>
+        <div class="row">
+            <label>Full Name(required)</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address(required)</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Message(required)</label>
+            <textarea rows="4" cols="50" name="message"></textarea>
+            <div class="error" id="messErr"></div>
+
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <script src="validation.js" ></script>
+</body>
+
+    
+</body>
+</html>
